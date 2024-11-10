@@ -1,5 +1,5 @@
-var mysql = require('mysql');
-try {
+var mysql = require('mysql2');
+/* try {
     var connection = mysql.createConnection({
       host     : 'localhost',
       user     : 'root',
@@ -16,4 +16,23 @@ try {
     console.log(error)
 }
 module.exports = connection; 
-//database conn
+//database conn */
+
+require('dotenv').config();
+
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASS || 'password',
+  database: process.env.DB_NAME || 'vitavia',
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.error('Database connection error:', err);
+  } else {
+    console.log('Database is connected!');
+  }
+});
+
+module.exports = connection;
