@@ -1,0 +1,9 @@
+
+//get files (images,videos) constants
+const GET_FILE_REQUEST = "GET_FILE_REQUEST"
+const GET_FILE_SUCCESS = "GET_FILE_SUCCESS"
+const GET_FILE_FAIL = "GET_FILE_FAIL"
+
+export {
+    GET_FILE_FAIL,GET_FILE_REQUEST,GET_FILE_SUCCESS
+}

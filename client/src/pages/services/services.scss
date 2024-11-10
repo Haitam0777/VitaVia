@@ -1,0 +1,168 @@
+.services{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    overflow: hidden;
+    background-color: white !important;
+    .backgroundImg{
+        z-index: 2;
+        position: absolute;
+        display: flex;
+        top: 0%;
+        width: 100%;
+        height: 70vh;
+        .backgroundShadow{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,1) ;
+            opacity: .7;
+        }
+        .banner{
+            position: absolute;
+            z-index: 100;
+            color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 280px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .content{
+        margin-top: 70vh;
+        margin-bottom: 200px;        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        z-index: 4;
+        position: relative;
+        background-color: white;
+        .Servicestext{
+            h1,h4{
+                font-weight: 300;
+                text-align: center;
+            }
+        }
+        .types{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            .type{
+                width: 400px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                .typeImg{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        height: 500px;
+                        width:90%;
+                        object-fit: cover;
+                    }
+                }
+                
+                .legende{
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 50px;
+                    width: 90%;
+                    border-top: #A98606 4px solid;
+                    overflow: hidden;
+                    transition: .5s ease-in-out;
+                    background-color: white;
+                    .title{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        height: 50px;
+                        align-items: flex-start;
+                        h1{
+                            height: 50px;
+                            margin-top: 2%;
+                            font-weight: 200;
+                            font-size: 25px;
+                            transition: .3s ease-in-out;
+                        }
+                        .checkIcon{
+                            background: rgb(214, 156, 22);
+                            height: 50px;
+                            width: 7%;
+                            font-size: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transition: .5s ease-in-out;
+                            color: white;
+                        }
+                    }
+                    .description{
+                        p{
+                            font-weight: 350;
+                            padding: 5px;
+                        }
+                    }
+                    .learnMore{
+                        display: flex;
+                        justify-content: flex-start;
+                        margin-bottom: 20px;
+                        a{
+                            font-size: 20px;
+                            font-weight: 400;
+                            color: rgb(214, 156, 22);
+
+                        }
+                    }
+
+                }
+                &:hover{
+                    .legende{
+                        height: 200px;
+                        margin-top: -150px;
+                        border-top: white 4px solid;
+                    }
+                    .title{
+                        .checkIcon{
+                            background-color: white;
+                            color: rgb(214, 156, 22);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    h3{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+}
+@media (max-width:500px){
+    .content{
+        margin-bottom: 900px !important;
+    }
+}

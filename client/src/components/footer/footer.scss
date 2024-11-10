@@ -1,0 +1,318 @@
+.productFooter{
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #7f7f7f;
+    background-color: #171717;
+    color: white;
+    border-top: rgb(133, 133, 133) 2px solid;
+    height: 500px;
+    width: 100%;
+    z-index: 99;
+
+    .ste-info{
+        color: #7f7f7f;
+        width: 30%;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 455px;
+        .ste-info-titre{
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            margin-bottom: 20px;
+            font-size: 22px;
+            padding: 5px;
+            font-family: 'Montserrat', sans-serif;            
+            position: relative;
+            color: white;
+            p{
+                &::after{
+                    position: absolute;
+                    z-index: 100;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    height: 3px !important;
+                    width: 73px !important;
+                    background-color: #d69c16;
+                    
+                }
+            }
+        }
+        .ste-info-desc{
+            color: #7f7f7f;
+            margin-bottom: 30px;
+            margin: 0;
+            font-size: 15px;
+
+        }
+        .ste-info-contact-info{
+            div{
+                display: flex;
+                align-items: center;
+                    width: 100%;
+            }
+            .address{
+                .info-icon{
+                    width: 25px !important;
+                }
+            }
+            .info-icon{
+                border-right: #7f7f7f 2px solid;
+                margin-right: 10px;
+                height: 100%;
+                width: 20px;
+                padding-right: 5px;
+            }
+            p{
+                font-size: 14px;
+            }
+    }
+}   
+@media (max-width: 728px) {
+    .ste-info{
+        height: 300px;
+    }
+}
+
+    .sitemap{
+        padding: 20px;
+        box-sizing: border-box;
+        width: 20%;
+        height: 455px;
+        .ste-info-titre{
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            font-size: 22px;
+            padding: 5px;
+            font-family: 'Montserrat', sans-serif;            
+            position: relative;
+            color: white;
+            p{
+                &::after{
+                    position: absolute;
+                    z-index: 100;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    height: 3px !important;
+                    width: 73px !important;
+                    background-color: #d69c16;
+                    
+                }
+            }
+        }
+        .sitemap-links{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-self: flex-start;
+            font-family: "Roboto", sans-serif;
+            .sitemap-link{
+                display: flex;
+                align-items: flex-start;
+            }
+            .sitemap-link a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                margin: 10px ;
+            }
+        }
+    }
+    .horaires{
+        height: 455px;
+        width: 30%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        .ste-info-titre{
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            font-size: 22px;
+            padding: 5px;
+            font-family: 'Montserrat', sans-serif;            
+            position: relative;
+            color: white;
+            p{
+                &::after{
+                    position: absolute;
+                    z-index: 100;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    height: 3px !important;
+                    width: 73px !important;
+                    background-color: #d69c16;
+                    
+                }
+            }
+        }
+        .horaires-jours{
+            border: 1px #7f7f7f solid;
+            margin-top: 20px;
+            height: 65%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            .horaires-jour{
+                display: flex;
+                margin: 10px;
+                justify-content: space-between;
+
+                .horaires-jour-titre{
+                    color: #7f7f7f;
+                    font-weight: 400;
+                    font-family: "Roboto",sans-serif;
+                }
+            }
+        }
+    }
+    a{
+        color: white;
+    }
+}
+    .copyright{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+        width: 103%;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        border-top: #7f7f7f 1px solid;
+        color: #7f7f7f;
+        background-color: #171717 !important;
+        a{
+            color: white;
+            position: relative;
+        }
+        .copyright{
+            flex-direction: column;
+        }
+    }
+    
+
+
+    @media (max-width:1200px){
+        .productFooter{
+        .ste-info{
+            width: 100%;
+            padding: 20px;
+            .ste-info-titre{
+                p{
+                    padding: 0;
+                }
+            }
+            .ste-info-contact-info{
+                .address{
+                    .info-icon{
+                        width: 80px !important;
+                    }
+                }
+            }
+        }
+        .sitemap{
+            width: 100%;
+            
+        }
+        .horaires{
+            width: 100%;
+            .horaires-jours{
+                .horaires-jour{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .copyright{
+        height: 40px !important;
+    }
+    @media (max-width:500px){
+        .productFooter{
+            flex-direction: column;
+            height: 100%;
+            .ste-info{
+                padding-bottom: 0;
+                .ste-info-contact-info{
+                    .address{
+                        .info-icon{
+                            width: 50px !important;
+                        }
+                    }
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+                .ste-info-titre{
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+            .sitemap{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: -7vh;
+                margin-top: -2.5vh;
+                padding-bottom: 0;
+                .ste-info-titre{
+                    p{
+                        margin: 0;
+                    }
+                }
+                .sitemap-links{
+                    .sitemap-link{
+                        margin: 1px !important;
+                        a{
+                            p{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .horaires{
+                .horaires-jours{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 9%;
+                    height: auto;
+                }
+                .ste-info-titre{
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .copyright{
+            height: 50px !important;
+        }
+        @media (max-width:400px){
+            .productFooter{
+                overflow: scroll;
+                .sitemap{
+                    height: auto;
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    .sitemap-links{
+                        flex-direction: row;
+                    }
+                }
+                .horaires{
+                    padding-top: 0px;
+                    .horaires-jours{
+                        margin-top: 5px;
+                        .horaires-jour{
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

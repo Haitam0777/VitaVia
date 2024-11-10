@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.77616ee1.css",
+    "main.js": "/static/js/main.307d4340.js",
+    "static/media/chrono.png": "/static/media/chrono.d844ff9482d64146c8c7.png",
+    "static/media/halal.png": "/static/media/halal.a039c12238a41a2ddf36.png",
+    "static/media/truck.png": "/static/media/truck.06e044926a3f08d35699.png",
+    "index.html": "/index.html",
+    "main.77616ee1.css.map": "/static/css/main.77616ee1.css.map",
+    "main.307d4340.js.map": "/static/js/main.307d4340.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77616ee1.css",
+    "static/js/main.307d4340.js"
+  ]
+}
