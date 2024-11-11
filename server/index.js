@@ -60,18 +60,19 @@ app.post("/api/login",async (req,res)=>{
 });
 
 //get pictures links from database
-app.post("/get-files",async (req,res)=>{
+app.post("/get-files", async (req, res) => {
     try {
-        db.query("select * from "+req.body.table+" where page like ?",[req.body.page],(err,result)=>{
-            if(err){
-                console.log(err)
+        db.query("select * from "+req.body.table+" where page like ?", [req.body.page], (err, result) => {
+            if (err) {
+                console.log(err);
                 res.status(501).json(err);
-            }else{
-                res.status(200).send(result)
+            } else {
+                res.status(200).send(result);
             }
-        })
+        });
     } catch (error) {
-        
+        console.log(error);
+        // Pas de réponse envoyée en cas d'erreur dans le bloc catch
     }
 });
 //update data
