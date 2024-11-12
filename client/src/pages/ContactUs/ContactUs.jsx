@@ -42,7 +42,7 @@ export default function ContactUs() {
             </div>
           </div>
           <div className="image">
-            <img src={files?.files?.at(0)?.image} alt="" />
+          <img src={"/images/service_prod_img/1719092421002.jpeg"} className="backgroundImg" alt="" />
           </div>
         </div>
         <div className="contact-wrapper">

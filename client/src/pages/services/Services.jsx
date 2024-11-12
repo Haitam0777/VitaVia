@@ -23,13 +23,16 @@ export default function Services() {
         <div className="backgroundShadow"></div>
         <img src={"/images/products/1718860979149.jpeg"} alt="" />
         <div className="banner">
-          <h1>Catégories</h1>
+          <h1>Nos produits</h1>
         </div>
       </div>
       <div className="content">
         <div className="Servicestext">
-          <h1>CATEGORIES</h1>
+          <br/>
+          <br/>
           <h4>DES PRODUITS BIEN MENÉS, DES CLIENTS SATISFAITS !</h4>
+          <br/>
+          <br/>
         </div>
 
         <div className="types">
