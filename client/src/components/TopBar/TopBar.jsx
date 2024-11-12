@@ -49,7 +49,7 @@ export default function TopBar() {
             </li>
           </Link>
           <Link to="/Services" onClick={handleChooseLink}>
-            <li>Catégories</li>
+            <li>Nos produits</li>
           </Link>
           <Link to="/contactUs" onClick={handleChooseLink}>
             <li>Contactez Nous</li>

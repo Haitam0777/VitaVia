@@ -34,6 +34,7 @@ import priceImage from "../../images/cash.png";
 import deliveryImage from "../../images/truck.png";
 import advisorImage from "../../images/salute.png";
 import timeSavingImage from "../../images/chrono.png";
+import CategorieSlide from "../../components/CategorieSlide/CategorieSlide";
 
 SwiperCore.use([
   Autoplay,
@@ -105,38 +106,10 @@ export default function Banner() {
       <div className="banner-content">
         <div className="nos-services">
           <div className="title" data-inviewport="show-title">
-            <h1>Catégories</h1>
-            <RiServiceFill className="title-icon" />
+            <h1>Nos produits</h1>
           </div>
           <div className="nos-services-content" data-inviewport="show-service">
-            {services?.data?.map((item) => (
-              <div
-                key={item.id}
-                className="home-page-service"
-                onClick={() => linkRef.current.click()}
-              >
-                <div className="service-image">
-                  <img src={item?.image} alt="" />
-                </div>
-                <div className="service-content">
-                  <div className="service-content-title">
-                    <h1>{item.name}</h1>
-                  </div>
-                  <div className="service-content-description">
-                    <p>{item.description}</p>
-                  </div>
-                  <div className="services-content-savoire-plus">
-                    <Link
-                      to={"/service/" + item.id}
-                      state={{ type: "adhesif" }}
-                      ref={(ref) => ref !== null && (linkRef.current = ref)}
-                    >
-                      <button>En Savoire +</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <CategorieSlide />
           </div>
         </div>
         <div className="nos-avantages">
