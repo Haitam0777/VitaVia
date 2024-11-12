@@ -6,33 +6,33 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Breakfast',
+    url: '/images/Categories/agneau.jpg',
+    title: 'Agneau',
     width: '17%',
   },
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Burgers',
+    url: '/images/Categories/boeuf.jpg',
+    title: 'Boeuf',
     width: '17%',
   },
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Camera',
+    url: '/images/Categories/poulet.jpg',
+    title: 'Poulet',
     width: '17%',
   },
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Camera',
+    url: '/images/Categories/veau.jpg',
+    title: 'Veau',
     width: '17%',
   },
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Camera',
+    url: '/images/Categories/surgele.png',
+    title: 'Surgelé',
     width: '17%',
   },
   {
-    url: '/images/products/image-1.jpeg',
-    title: 'Camera',
+    url: '/images/Categories/epicerie.jpg',
+    title: 'Epicerie',
     width: '15%',
   },
 ];

@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaChevronDown } from "react-icons/fa";
 import Footer from "../../components/footer/Footer";
-import { useDispatch, useSelector } from "react-redux";
-
 import "./aboutUs.scss";
-import { get_file_action } from "../../state/actions/FilesAction";
 
 export default function AboutUs() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [index, setIndex] = useState(-6);
   const [showImg, setShowImg] = useState(false);
   const [imgToShow, setImgToShow] = useState("");
-  const files = useSelector((state) => state.files);
-  const dispatch = useDispatch();
 
   window.addEventListener("scroll", () => {
     setIsScrolled(window.scrollY === 0 ? false : true);
@@ -22,8 +17,8 @@ export default function AboutUs() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(get_file_action("products", "about-us"));
-  }, [dispatch]);
+  }, []);
+
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -37,6 +32,7 @@ export default function AboutUs() {
       }
     }
   }
+
   const handleShowImg = (link) => {
     if (link) {
       setShowImg(true);
@@ -47,6 +43,7 @@ export default function AboutUs() {
       document.getElementsByTagName("body")[0].style.overflow = "auto";
     }
   };
+
   const handleImages = () => {
     if (index > 46) {
       setIndex(-6);
@@ -54,6 +51,7 @@ export default function AboutUs() {
       setIndex(index + 1);
     }
   };
+
   const handleImageReverse = () => {
     if (index < -6) {
       setIndex(46);
@@ -61,6 +59,7 @@ export default function AboutUs() {
       setIndex(index - 1);
     }
   };
+
   return (
     <>
       <div className="aboutus">
@@ -71,7 +70,7 @@ export default function AboutUs() {
               onClick={() => handleShowImg()}
             ></div>
             <div className="img">
-              <img src={imgToShow} alt="" />
+              <img src='/images/aboutus.jpg' className="backgroundImg" alt="" />  
               <span onClick={() => handleShowImg()}>
                 <AiOutlineClose />
               </span>
@@ -80,7 +79,8 @@ export default function AboutUs() {
         )}
         <>
           <div className="aboutUsImg">
-            <img src={files.files?.at(0)?.image} alt="" />
+            {/* Replace with your static image path */}
+            <img src='/images/aboutus.jpg'  alt="About Us" />
           </div>
           <div className="textForImg">
             <p onClick={handleImages}>Vita Via</p>
@@ -109,23 +109,15 @@ export default function AboutUs() {
               </p>
             </div>
             <div className="productImgs">
-              {files.files &&
-                files.files
-                  ?.filter((item) => !item?.name.includes("art"))
-                  .map((item) => (
-                    <img
-                      src={item?.image}
-                      alt=""
-                      onClick={() => handleShowImg(item?.image)}
-                    />
-                  ))}
+              {/* Replace these images with static images or remove if not needed */}
+              <img src="/images/static-image1.jpeg" alt="" onClick={() => handleShowImg("/images/static-image1.jpeg")} />
+              <img src="/images/static-image2.jpeg" alt="" onClick={() => handleShowImg("/images/static-image2.jpeg")} />
             </div>
             <div className="productHistory reveal">
               <h2>Notre Mission</h2>
               <div>
                 <p>
                   <b>
-                    {" "}
                     Gérer toute la chaîne de production, de la qualité et du
                     bien-être animal à l'abattage des bêtes, en passant par le
                     conditionnement, jusqu'à la livraison dans vos points de
@@ -134,7 +126,7 @@ export default function AboutUs() {
                   </b>
                 </p>
               </div>
-              <h1>Nos partenaires en toute transparence </h1>
+              <h1>Nos partenaires en toute transparence</h1>
               <div>
                 <p>
                   Chez Vita open shop, nous avons fait le choix de travailler

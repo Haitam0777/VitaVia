@@ -6,6 +6,7 @@ import Footer from "../../components/footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { get_file_action } from "../../state/actions/FilesAction";
 import { get_services_action } from "../../state/actions/ServicesAction";
+import Accordions from "../../components/Accordions/Accordions";
 export default function Services() {
   const dispatch = useDispatch();
   const files = useSelector((state) => state.files);
@@ -32,30 +33,7 @@ export default function Services() {
         </div>
 
         <div className="types">
-          {services?.data?.map((item) => (
-            <div className="type" key={item.id}>
-              <div className="typeImg">
-                <img src={item?.image} alt="" />
-              </div>
-              <div className="legende">
-                <div className="title">
-                  <AiOutlineCheckSquare className="checkIcon" />
-                  <h1>{item.name}</h1>
-                </div>
-                <div className="description">
-                  <p>{item.description}</p>
-                </div>
-                <div className="learnMore">
-                  <Link
-                    to={"/service/" + item.id}
-                    state={{ type: "enseigne", id: item.id }}
-                  >
-                    Afficher
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+          <Accordions />
         </div>
       </div>
       <Footer />
